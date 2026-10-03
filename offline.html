@@ -2,41 +2,39 @@
 <html lang="es-MX">
 <head>
     <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-      <link rel="icon" href="https://www.elemsegpriv.com/Imagenes/Logo.webp" type="image/x-icon">
-    <title>Estado del Nodo de Seguridad</title>
-<meta name="description" content="Elemsegpriv ofrece servicios profesionales de seguridad privada y vigilancia integral. Personal capacitado para proteger tu empresa, comercio y hogar con total confianza." />  
-    <link rel="stylesheet" href="offline-minimal.css">
-    <!-- Google Fonts para tipografía ultra-limpia -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="icon" href="https://www.elemsegpriv.com/Imagenes/Logo.webp" type="image/x-icon">
+    <title>Estado del Nodo de Seguridad - Elemsegpriv</title>
+    <meta name="description" content="Elemsegpriv ofrece servicios profesionales de seguridad privada y vigilancia integral. Personal capacitado para proteger tu empresa, comercio y hogar con total confianza." />  
+    
 </head>
 <body>
 
-    <!-- Orbes de luz decorativos de fondo -->
     <div class="blur-orb orb-1"></div>
     <div class="blur-orb orb-2"></div>
 
     <div class="glass-wrapper">
-        <!-- Ilustración Geométrica Abstracta (Escudo + Red Caída) -->
         <div class="art-container">
             <div class="geo-circle outer"></div>
             <div class="geo-circle middle"></div>
             <div class="geo-circle inner">
-                <i class="fa-solid fa-wifi"></i>
+                <!-- SVG de Wi-Fi Autónomo Infiltrado -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
                 <div class="disconnect-slash"></div>
             </div>
         </div>
 
-        <!-- Bloque de Texto Principal -->
         <div class="status-content">
-            <div class="security-tag"><i class="fa-solid fa-fingerprint"></i>Estado del Nodo de Seguridad temporalmente o roto.</div>
+            <div class="security-tag">
+                <!-- SVG de Huella / Seguridad -->
+                <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 1c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 17c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 17.58 10.57 18 12 18c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/></svg>
+                Canal Perimetral Resguardado
+            </div>
             <h1>Buscando Señal...</h1>
-            <p>Tu enlace inteligente ha entrado en **modo autónomo protegido**. Restableciendo de forma segura el puente encriptado con tu central operativa corporativa.</p>
+            <p>Tu enlace inteligente ha entrado en <strong>modo autónomo protegido</strong>. Restableciendo de forma segura el puente encriptado con la central operativa de <strong>Elemsegpriv</strong>.</p>
         </div>
 
-        <!-- Indicador de Carga / Estado Minimalista -->
         <div class="loader-container">
             <div class="linear-progress">
                 <div class="bar"></div>
@@ -44,235 +42,247 @@
             <span class="loader-text">Intento de reconexión automática en curso</span>
         </div>
 
-        <!-- Acción Principal -->
         <button class="btn-refresh" onclick="tryReconnect()">
-            <span>Reconectar</span>
-            <i class="fa-solid fa-arrow-right-long"></i>
+            <span>Verificar Conexión</span>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
         </button>
     </div>
-<style>
-  /* --- Paleta de Colores y Estilo Minimalista --- */
-:root {
-    --bg-dark: #090b11;
-    --glass-bg: rgba(18, 22, 33, 0.65);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --text-pure: #ffffff;
-    --text-soft: #a0a5b5;
-    --accent-blue: #3b82f6;
-    --accent-glow: #1d4ed8;
-    --font-clean: 'Plus Jakarta Sans', sans-serif;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        /* --- Paleta de Colores Oficial Elemsegpriv (Dorado & Azul Marino) --- */
+        :root {
+            --bg-dark: #070b12;
+            --glass-bg: rgba(11, 19, 36, 0.75);
+            --glass-border: rgba(212, 175, 55, 0.15); /* Borde dorado sutil */
+            --text-pure: #ffffff;
+            --text-soft: #94a3b8;
+            --accent-gold: #d4af37; /* Dorado del Escudo */
+            --accent-blue: #1e40af; /* Azul de Seguridad Privada */
+            --font-clean: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-pure);
-    font-family: var(--font-clean);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 24px;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* --- Orbes de Luz de Fondo (Efecto de Profundidad) --- */
-.blur-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: 1;
-    opacity: 0.4;
-}
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-pure);
+            font-family: var(--font-clean);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 24px;
+          zoom:75%;
+        }
 
-.orb-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-glow);
-    top: -10%;
-    right: 10%;
-}
+        /* --- Orbes de Luz de Fondo Ambientales --- */
+        .blur-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0.25;
+        }
 
-.orb-2 {
-    width: 300px;
-    height: 300px;
-    background: #4f46e5;
-    bottom: 5%;
-    left: 15%;
-}
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--accent-blue);
+            top: -10%;
+            right: 10%;
+        }
 
-/* --- Contenedor con Efecto de Cristal Esmerilado --- */
-.glass-wrapper {
-    position: relative;
-    z-index: 2;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 24px;
-    width: 100%;
-    max-width: 460px;
-    padding: 48px 40px;
-    text-align: center;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-}
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent-gold);
+            bottom: 5%;
+            left: 15%;
+        }
 
-/* --- Arte Geométrico --- */
-.art-container {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 32px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        /* --- Contenedor Blindado Metálico/Cristal --- */
+        .glass-wrapper {
+            position: relative;
+            z-index: 2;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 460px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.03);
+        }
 
-.geo-circle {
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
+        /* --- Arte Geométrico del Escudo Autónomo --- */
+        .art-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 32px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.outer {
-    width: 100px;
-    height: 100px;
-    border-style: dashed;
-    animation: rotateGeo 20s linear infinite;
-}
+        .geo-circle {
+            position: absolute;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+        }
 
-.middle {
-    width: 70px;
-    height: 70px;
-    border-color: rgba(59, 130, 246, 0.2);
-}
+        .outer {
+            width: 100px;
+            height: 100px;
+            border-style: dashed;
+            animation: rotateGeo 25s linear infinite;
+        }
 
-.inner {
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    color: var(--text-soft);
-}
+        .middle {
+            width: 74px;
+            height: 74px;
+            border-color: rgba(30, 64, 175, 0.4);
+        }
 
-.disconnect-slash {
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #ef4444;
-    transform: rotate(-45deg);
-    box-shadow: 0 0 8px #ef4444;
-}
+        .inner {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-soft);
+        }
 
-@keyframes rotateGeo {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+        .disconnect-slash {
+            position: absolute;
+            width: 55px;
+            height: 3px;
+            background-color: #ef4444;
+            transform: rotate(-45deg);
+            box-shadow: 0 0 10px #ef4444;
+            border-radius: 2px;
+        }
 
-/* --- Textos --- */
-.security-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent-blue);
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    background: rgba(59, 130, 246, 0.1);
-    padding: 6px 14px;
-    border-radius: 30px;
-}
+        @keyframes rotateGeo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
 
-.status-content h1 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-bottom: 14px;
-    letter-spacing: -0.5px;
-}
+        /* --- Textos e Identidad --- */
+        .security-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 6px 14px;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
 
-.status-content p {
-    font-size: 0.9rem;
-    color: var(--text-soft);
-    line-height: 1.6;
-    margin-bottom: 36px;
-}
+        .security-tag svg {
+            fill: var(--accent-gold);
+        }
 
-/* --- Barra de Carga Lineal --- */
-.loader-container {
-    margin-bottom: 40px;
-}
+        .status-content h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
 
-.linear-progress {
-    background: rgba(255, 255, 255, 0.05);
-    height: 3px;
-    border-radius: 2px;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
+        .status-content p {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
 
-.linear-progress .bar {
-    background: linear-gradient(90deg, var(--accent-blue), #6366f1);
-    height: 100%;
-    width: 40%;
-    border-radius: 2px;
-    animation: loadingBar 2s infinite ease-in-out;
-}
+        /* --- Barra de Progreso de Red --- */
+        .loader-container {
+            margin-bottom: 40px;
+        }
 
-.loader-text {
-    font-size: 0.75rem;
-    color: var(--text-soft);
-}
+        .linear-progress {
+            background: rgba(255, 255, 255, 0.05);
+            height: 4px;
+            border-radius: 2px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
 
-@keyframes loadingBar {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(250%); }
-}
+        .linear-progress .bar {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+            height: 100%;
+            width: 40%;
+            border-radius: 2px;
+            animation: loadingBar 2.2s infinite ease-in-out;
+        }
 
-/* --- Botón Premium Fluido --- */
-.btn-refresh {
-    background: var(--text-pure);
-    color: var(--bg-dark);
-    border: none;
-    padding: 16px 28px;
-    width: 100%;
-    border-radius: 14px;
-    font-family: var(--font-clean);
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-}
+        .loader-text {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-.btn-refresh:hover {
-    background: #e2e8f0;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-}
+        @keyframes loadingBar {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(250%); }
+        }
 
-  </style>
+        /* --- Botón de Acción Principal --- */
+        .btn-refresh {
+            background: var(--text-pure);
+            color: var(--bg-dark);
+            border: none;
+            padding: 16px 24px;
+            width: 100%;
+            border-radius: 14px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-refresh:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+        }
+        
+        .btn-refresh svg {
+            fill: var(--bg-dark);
+        }
+    </style>
     <script>
         function tryReconnect() {
             if (navigator.onLine) {
                 window.location.reload();
             } else {
                 const text = document.querySelector('.loader-text');
-                text.innerHTML = "<span style='color: #ff7675'><i class='fa-solid fa-triangle-exclamation'></i> Canal bloqueado. Reintentando...</span>";
+                text.innerHTML = "<span style='color: #ef4444; font-weight: 600;'>⚠️ Canal bloqueado. Reintentando enlace...</span>";
                 setTimeout(() => {
                     text.innerText = "Intento de reconexión automática en curso";
-                }, 2000);
+                }, 2500);
             }
         }
     </script>
