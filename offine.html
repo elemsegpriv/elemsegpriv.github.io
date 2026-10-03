@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Nodo de Seguridad</title>
+    <link rel="stylesheet" href="offline-minimal.css">
+    <!-- Google Fonts para tipografía ultra-limpia -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Orbes de luz decorativos de fondo -->
+    <div class="blur-orb orb-1"></div>
+    <div class="blur-orb orb-2"></div>
+
+    <div class="glass-wrapper">
+        <!-- Ilustración Geométrica Abstracta (Escudo + Red Caída) -->
+        <div class="art-container">
+            <div class="geo-circle outer"></div>
+            <div class="geo-circle middle"></div>
+            <div class="geo-circle inner">
+                <i class="fa-solid fa-wifi"></i>
+                <div class="disconnect-slash"></div>
+            </div>
+        </div>
+
+        <!-- Bloque de Texto Principal -->
+        <div class="status-content">
+            <div class="security-tag"><i class="fa-solid fa-fingerprint"></i>Estado del Nodo de Seguridad temporalmente o roto.</div>
+            <h1>Buscando Señal...</h1>
+            <p>Tu enlace inteligente ha entrado en **modo autónomo protegido**. Restableciendo de forma segura el puente encriptado con tu central operativa corporativa.</p>
+        </div>
+
+        <!-- Indicador de Carga / Estado Minimalista -->
+        <div class="loader-container">
+            <div class="linear-progress">
+                <div class="bar"></div>
+            </div>
+            <span class="loader-text">Intento de reconexión automática en curso</span>
+        </div>
+
+        <!-- Acción Principal -->
+        <button class="btn-refresh" onclick="tryReconnect()">
+            <span>Reconectar</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+    </div>
+<style>
+  /* --- Paleta de Colores y Estilo Minimalista --- */
+:root {
+    --bg-dark: #090b11;
+    --glass-bg: rgba(18, 22, 33, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-pure: #ffffff;
+    --text-soft: #a0a5b5;
+    --accent-blue: #3b82f6;
+    --accent-glow: #1d4ed8;
+    --font-clean: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-pure);
+    font-family: var(--font-clean);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 24px;
+}
+
+/* --- Orbes de Luz de Fondo (Efecto de Profundidad) --- */
+.blur-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-glow);
+    top: -10%;
+    right: 10%;
+}
+
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: #4f46e5;
+    bottom: 5%;
+    left: 15%;
+}
+
+/* --- Contenedor con Efecto de Cristal Esmerilado --- */
+.glass-wrapper {
+    position: relative;
+    z-index: 2;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 460px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Arte Geométrico --- */
+.art-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 32px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geo-circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.outer {
+    width: 100px;
+    height: 100px;
+    border-style: dashed;
+    animation: rotateGeo 20s linear infinite;
+}
+
+.middle {
+    width: 70px;
+    height: 70px;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.inner {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--text-soft);
+}
+
+.disconnect-slash {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #ef4444;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 8px #ef4444;
+}
+
+@keyframes rotateGeo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- Textos --- */
+.security-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.status-content h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.status-content p {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+/* --- Barra de Carga Lineal --- */
+.loader-container {
+    margin-bottom: 40px;
+}
+
+.linear-progress {
+    background: rgba(255, 255, 255, 0.05);
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.linear-progress .bar {
+    background: linear-gradient(90deg, var(--accent-blue), #6366f1);
+    height: 100%;
+    width: 40%;
+    border-radius: 2px;
+    animation: loadingBar 2s infinite ease-in-out;
+}
+
+.loader-text {
+    font-size: 0.75rem;
+    color: var(--text-soft);
+}
+
+@keyframes loadingBar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(250%); }
+}
+
+/* --- Botón Premium Fluido --- */
+.btn-refresh {
+    background: var(--text-pure);
+    color: var(--bg-dark);
+    border: none;
+    padding: 16px 28px;
+    width: 100%;
+    border-radius: 14px;
+    font-family: var(--font-clean);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-refresh:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+  </style>
+    <script>
+        function tryReconnect() {
+            if (navigator.onLine) {
+                window.location.reload();
+            } else {
+                const text = document.querySelector('.loader-text');
+                text.innerHTML = "<span style='color: #ff7675'><i class='fa-solid fa-triangle-exclamation'></i> Canal bloqueado. Reintentando...</span>";
+                setTimeout(() => {
+                    text.innerText = "Intento de reconexión automática en curso";
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
