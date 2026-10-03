@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+      <link rel="icon" href="https://www.elemsegpriv.com/Imagenes/Logo.webp" type="image/x-icon">
+    <title>Error 404</title>
+<meta name="description" content="Elemsegpriv ofrece servicios profesionales de seguridad privada y vigilancia integral. Personal capacitado para proteger tu empresa, comercio y hogar con total confianza." /> 
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="badge">Estatus del Enlace</div>
+        
+        <!-- El número con la animación aplicada -->
+        <h1 class="number-404">404</h1>
+        
+        <h2>Acceso Fuera de Ruta</h2>
+        <p>El recurso ELEMSEGPRIV a solicitado no se encuentra activo en esta dirección o ha sido reubicado bajo protocolos de seguridad interna.</p>
+        
+        <a href="/" class="btn-premium">Volver al Portal Seguro</a>
+    </div>
+
+    <style>
+        /* Estilos Base Premium */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            color: #f8fafc;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+          zoom:75%;
+        }
+        .wrapper {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        /* 👑 ANIMACIÓN DEL NÚMERO 404 (Efecto Glitch & Escudo de Energía) */
+        .number-404 {
+            font-size: 8.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 0;
+            position: relative;
+            color: #ffffff;
+            display: inline-block;
+            letter-spacing: -2px;
+            /* Efecto de iluminación dorada premium */
+            text-shadow: 
+                0 0 10px rgba(226, 177, 60, 0.3),
+                0 0 30px rgba(226, 177, 60, 0.2);
+            /* Animación de pulso continuo */
+            animation: pulseShield 3s infinite ease-in-out;
+        }
+
+        /* Capas falsas para el efecto de interferencia digital controlada (Glitch) */
+        .number-404::before,
+        .number-404::after {
+            content: "404";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0f172a; /* Mismo fondo para ocultar partes */
+            clip: rect(0, 0, 0, 0); 
+        }
+
+        .number-404::before {
+            left: 3px;
+            text-shadow: -2px 0 #e2b13c; /* Sombra Dorada */
+            animation: glitchEffect 4s infinite linear alternate-reverse;
+        }
+
+        .number-404::after {
+            left: -3px;
+            text-shadow: -2px 0 #3b82f6; /* Sombra Azul Seguridad */
+            animation: glitchEffect 3s infinite linear alternate-reverse;
+        }
+
+        /* Textos de Información */
+        .badge {
+            background: rgba(226, 177, 60, 0.1);
+            border: 1px solid #e2b13c;
+            color: #e2b13c;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.6rem;
+            color: #f1f5f9;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* Botón con micro-interacción */
+        .btn-premium {
+            display: inline-block;
+            background: linear-gradient(135deg, #e2b13c 0%, #b8861b 100%);
+            color: #0f172a;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(226, 177, 60, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(226, 177, 60, 0.4);
+            background: linear-gradient(135deg, #f3c44f 0%, #cca030 100%);
+        }
+
+        /* Keyframes de las Animaciones */
+        @keyframes pulseShield {
+            0%, 100% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            50% {
+                transform: scale(1.03);
+                filter: brightness(1.15);
+            }
+        }
+
+        @keyframes glitchEffect {
+            0% { clip: rect(42px, 9999px, 44px, 0); }
+            5% { clip: rect(12px, 9999px, 59px, 0); }
+            10% { clip: rect(92px, 9999px, 2px, 0); }
+            15% { clip: rect(65px, 9999px, 85px, 0); }
+            20% { clip: rect(0, 0, 0, 0); } /* Pausa del efecto */
+            100% { clip: rect(0, 0, 0, 0); }
+        }
+    </style>
+</body>
+</html>
