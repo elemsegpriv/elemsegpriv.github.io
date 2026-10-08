@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+      <link rel="icon" href="https://www.elemsegpriv.com/Imagenes/Logo.webp" type="image/x-icon">
+    <title>Documentación - Manuales, Protocolos, Formatos, Plantillas y Bitacora</title>
+<meta name="description" content="Accede a manuales de seguridad privada, protocolos de actuación y documentación técnica. Todo lo necesario para cumplir con las normativas legales." />
+<!--  logo fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <!-- Control de Indexación y Canónicas -->
+    <link rel="canonical" href="https://www.elemsegpriv.com">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+      <!-- Integración con Teléfonos Inteligentes (UI/UX) -->
+    <meta name="theme-color" content="#1a1a1a"> <!-- Reemplaza con el color principal de tu web -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+<!-- Seguridad de Privacidad (No envía datos de origen a enlaces externos) -->
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<!-- Pistas de Rendimiento para Redes Móviles (Client Hints) -->
+<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Save-Data, ECT">
+
+<!-- Si el artículo tiene traducciones (SEO Internacional) -->
+<link rel="alternate" hreflang="en" href="https://www.elemsegpriv.com">
+<link rel="alternate" hreflang="x-default" href="https://www.elemsegpriv.com">
+
+<!-- Control de Caché (Para noticias de última hora con actualizaciones frecuentes) -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+    <!-- Open Graph / Metadatos para Redes Sociales (Facebook, WhatsApp) -->
+    <meta property="og:type" content="WebSite">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Documentacion">
+    <meta property="og:title" content="Documentación - Manuales, Protocolos, Formatos, Plantillas y Bitacora">
+    <meta property="og:description" content="Accede a manuales de seguridad privada, protocolos de actuación y documentación técnica. Todo lo necesario para cumplir con las normativas legales.">
+    <meta property="og:url" content="https://www.elemsegpriv.com/Documentacion">
+    <meta property="og:image" content="https://www.elemsegpriv.com/Imagenes/Logo.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Documentación - Manuales, Protocolos, Formatos, Plantillas y Bitacora">
+
+    <!-- Tarjetas Exclusivas para Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Documentacion">
+    <meta name="twitter:title" content="Documentación - Manuales, Protocolos, Formatos, Plantillas y Bitacora">
+    <meta name="twitter:description" content="Accede a manuales de seguridad privada, protocolos de actuación y documentación técnica. Todo lo necesario para cumplir con las normativas legales.">
+    <meta name="twitter:image" content="https://www.elemsegpriv.com/Imagenes/Logo.webp">
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5V8V5GSLBF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5V8V5GSLBF');
+</script>
+</head>
+<body>
+ <div class="top-bar"> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg> Llámanos al 55-XXXX-XXXX | <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+  <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+  <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/>
+</svg> Servicio de guardias 12,24/7 en todo México</p> </div>
+    <main class="doc-wrapper">
+        
+        <!-- Cabecera -->
+        <div class="doc-header">
+            <h1>Portal de Transparencia y <span>Documentación</span></h1>
+            <p>Acceso verificado a los permisos regulatorios, contratos base y actas de cumplimiento legal que sustentan la infraestructura operativa de ELEMSEGPRIV.</p>
+        </div>
+
+        <!-- Filtros Tácticos -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos los registros</button>
+            <button class="filter-btn" data-filter="permisos">Permisos Gubernamentales</button>
+            <button class="filter-btn" data-filter="calidad">Certificaciones ISO</button>
+            <button class="filter-btn" data-filter="legal">Pólizas y Contratos</button>
+            <button class="filter-btn" data-filter="areas">Areas</button>
+
+        </div>
+
+        <!-- Lista de Documentación -->
+        <div class="doc-list">
+            
+            <!-- Documento 1 -->
+            <div class="doc-row" data-category="permisos">
+                <div class="doc-icon">📋</div>
+                <div class="doc-info">
+                    <h3>Permiso de Operación Federal SS-DGSP</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">DGSP/0110-26/OCT</span></span>
+                        <span>Formato: <b>PDF Secure</b></span>
+                        <span>Tamaño: <b>2.4 MB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ VIGENTE 2026</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+
+            <!-- Documento 2 -->
+            <div class="doc-row" data-category="calidad">
+                <div class="doc-icon">📜</div>
+                <div class="doc-info">
+                    <h3>Certificado Internacional ISO 9001:2026</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">MX-9001-QMS</span></span>
+                        <span>Formato: <b>PDF Digital</b></span>
+                        <span>Tamaño: <b>1.8 MB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ AUDITADO</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+
+            <!-- Documento 3 -->
+            <div class="doc-row" data-category="legal">
+                <div class="doc-icon">🛡️</div>
+                <div class="doc-info">
+                    <h3>Póliza de Responsabilidad Civil Integral</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">PRC-99402-26</span></span>
+                        <span>Formato: <b>PDF Crypt</b></span>
+                        <span>Tamaño: <b>4.1 MB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ COBERTURA ALTA</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+
+            <!-- Documento 4 -->
+            <div class="doc-row" data-category="permisos">
+                <div class="doc-icon">🏢</div>
+                <div class="doc-info">
+                    <h3>Registro de Prestadoras de Servicios Especializados (REPSE)</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">REPSE-STPS-2026</span></span>
+                        <span>Formato: <b>PDF Verified</b></span>
+                        <span>Tamaño: <b>1.2 MB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ AUTORIZADO</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+
+           <!-- Documento 5 -->
+            <div class="doc-row" data-category="legal">
+                <div class="doc-icon">✍️</div>
+                <div class="doc-info">
+                    <h3>Contrato de Prestación de Servicios (Machote Homologado)</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">CPS-ELEMSEG-V3</span></span>
+                        <span>Formato: <b>DOCX / PDF</b></span>
+                        <span>Tamaño: <b>850 KB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ REVISIÓN LEGAL</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+  
+            <!-- Documento 6 (Hito de Auditoría Técnica Extra) -->
+            <div class="doc-row" data-category="calidad">
+                <div class="doc-icon">🔍</div>
+                <div class="doc-info">
+                    <h3>Dictamen de Auditoría Interna de Control Operativo</h3>
+                    <div class="doc-meta">
+                        <span>ID: <span class="meta-tag">AUD-ELEMSEG-2026</span></span>
+                        <span>Formato: <b>PDF Secure</b></span>
+                        <span>Tamaño: <b>3.1 MB</b></span>
+                    </div>
+                </div>
+                <span class="doc-status-badge">✓ APROBADO</span>
+                <button class="download-btn">Descargar</button>
+            </div>
+
+        </div> <!-- Fin de .doc-list -->
+    </main>
+   <main class="doc-wrapper_1">
+        
+        <!-- Cabecera Principal -->
+        <div class="doc-header">
+            <h1>Portal Interno de <span>Documentación por Área</span></h1>
+            <p>Repositorio seguro de formatos esenciales, manuales corporativos e instructivos técnicos divididos por la estructura jerárquica de ELEMSEGPRIV.</p>
+        </div>
+
+        <!-- SECCIÓN 1: RECURSOS HUMANOS -->
+        <section id="recursos-humanos">
+            <h2 class="section-title">Área de Recursos Humanos (RH)</h2>
+            <div class="doc-list">
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">👥</div>
+                    <div class="doc-info">
+                        <h3>Formato Interno de Reclutamiento y Selección</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">RH-RECLUTA-2026</span></span>
+                            <span>Formato: <b>PDF Form</b></span>
+                            <span>Tamaño: <b>1.1 MB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ ACTUALIZADO</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">📝</div>
+                    <div class="doc-info">
+                        <h3>Manual de Código de Conducta e Integridad</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">RH-CODIGO-INT</span></span>
+                            <span>Formato: <b>PDF Secure</b></span>
+                            <span>Tamaño: <b>2.5 MB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ OBLIGATORIO</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CONTABILIDAD -->
+        <section id="contabilidad">
+            <h2 class="section-title">Área de Contabilidad y Finanzas</h2>
+            <div class="doc-list">
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">💵</div>
+                    <div class="doc-info">
+                        <h3>Plantilla Base para Facturación y Cobranza</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">CONT-FACT-V2</span></span>
+                            <span>Formato: <b>XLSX Excel</b></span>
+                            <span>Tamaño: <b>420 KB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ FISCAL</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">📊</div>
+                    <div class="doc-info">
+                        <h3>Formato de Solicitud de Reembolso de Viáticos Tácticos</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">CONT-VIAT-GTO</span></span>
+                            <span>Formato: <b>PDF Digital</b></span>
+                            <span>Tamaño: <b>780 KB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ REVISIÓN</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: ADMINISTRATIVO -->
+        <section id="administrativo">
+            <h2 class="section-title">Área Administrativa</h2>
+            <div class="doc-list">
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">🏛️</div>
+                    <div class="doc-info">
+                        <h3>Machote de Contrato de Prestación de Servicios Colectivos</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">ADM-CONTRATO-BASE</span></span>
+                            <span>Formato: <b>DOCX Word</b></span>
+                            <span>Tamaño: <b>920 KB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ CONTROL LEGAL</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">🏢</div>
+                    <div class="doc-info">
+                        <h3>Cédula y Constancia del Registro Oficial REPSE</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">ADM-REPSE-VALIDO</span></span>
+                                                  </div>
+                    </div>
+                    <span class="doc-status-badge">✓ VIGENTE</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: ELEMENTOS DE SECURIDAD PRIVADA -->
+        <section id="elementos-seguridad">
+            <h2 class="section-title">Área Operativa: Elementos de Seguridad Privada</h2>
+            <div class="doc-list">
+                <!-- Documento 7 -->
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">🕴️</div>
+                    <div class="doc-info">
+                        <h3>Manual de Consignas Generales y Protocolo de Reacción</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">SEG-MANUAL-TACT</span></span>
+                            <span>Formato: <b>PDF Crypt</b></span>
+                            <span>Tamaño: <b>4.8 MB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ USO ESTRICTO</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+                <!-- Documento 8 -->
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">🚗</div>
+                    <div class="doc-info">
+                        <h3>Bitácora de Control Vial y Custodia de Activos</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">SEG-BITACORA-RUTAS</span></span>
+                            <span>Formato: <b>PDF Form</b></span>
+                            <span>Tamaño: <b>1.3 MB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ REQUERIDO</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+                 <!-- Documento 9 -->
+                <div class="doc-row" data-category="areas">
+                    <div class="doc-icon">🚗</div>
+                    <div class="doc-info">
+                        <h3>Formato de visitas de caseta</h3>
+                        <div class="doc-meta">
+                            <span>ID: <span class="meta-tag">SEG-BITACORA-VISITAS</span></span>
+                            <span>Formato: <b>PDF DOC</b></span>
+                            <span>Tamaño: <b>1.0 MB</b></span>
+                        </div>
+                    </div>
+                    <span class="doc-status-badge">✓ REQUERIDO</span>
+                    <button class="download-btn">Descargar</button>
+                </div>
+            </div>
+        </section>
+
+    </main> 
+
+
+    <style>
+        :root {
+            --bg-deep: #080a0f;
+            --surface-card: #111522;
+            --border-tech: rgba(0, 240, 255, 0.15);
+            --accent-cyan: #00f0ff;
+            --accent-green: #39e57e;
+            --text-title: #ffffff;
+            --text-p: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-title);
+            padding:0;
+                      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+          zoom:75%;
+
+        }
+.top-bar {  
+  background: #f1c40f; 
+  color: #111; 
+  font-weight: 600; 
+  font-size: 14px; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 65px; 
+  z-index: 1000; 
+  
+  /* Método definitivo para centrar vertical y horizontalmente */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  box-sizing: border-box;
+}
+        .doc-wrapper, .doc-wrapper_1 {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        .doc-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .doc-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .doc-header h1 span {
+            color: var(--accent-cyan);
+        }
+
+        .doc-header p {
+            color: var(--text-p);
+            font-size: 1.05rem;
+            max-width: 750px;
+        }
+
+        /* Barra de Filtros Activos */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #171d2e;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-p);
+            padding: 8px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            color: var(--text-title);
+            background: rgba(0, 240, 255, 0.08);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-cyan);
+            color: var(--bg-deep);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+
+        /* Contenedor de Lista de Documentos */
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Tarjeta de Documento de Línea Única */
+        .doc-row {
+            background: var(--surface-card);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            padding: 20px 24px;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            gap: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .doc-row:hover {
+            border-color: var(--border-tech);
+            transform: translateX(4px);
+        }
+
+        .doc-icon {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: var(--accent-cyan);
+        }
+
+        .doc-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--text-p);
+        }
+
+        .meta-tag {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .doc-status-badge {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            background: rgba(57, 229, 126, 0.1);
+            border: 1px solid rgba(57, 229, 126, 0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Botón Técnico de Descarga */
+        .download-btn {
+            background: transparent;
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-deep);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        /* Animación de carga para simular descarga cifrada */
+        .download-btn.loading {
+            border-color: var(--text-p);
+            color: var(--text-p);
+            background: transparent;
+            cursor: wait;
+            pointer-events: none;
+        }
+
+        /* Vista Responsiva */
+        @media (max-width: 768px) {
+            .doc-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                text-align: center;
+            }
+            .doc-icon {
+                margin: 0 auto;
+            }
+            .doc-meta {
+                justify-content: center;
+            }
+            .doc-status-badge {
+                width: max-content;
+                margin: 0 auto;
+            }
+        }
+    </style>
+               <!-- La ruta debe recorrer todas las carpetas -->
+<script src="src/components/Header/header-alt.js" defer></script>
+<script src="src/components/Footer/footer-alt.js" defer></script>
+    <!-- CONTROL SCRIPT INTERACTIVO Y FILTROS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const docRows = document.querySelectorAll('.doc-row');
+    const downloadButtons = document.querySelectorAll('.download-btn');
+
+    // 1. RUTAS REALES: Coloca aquí los nombres exactos de tus archivos reales
+    const enlacesDescarga = {
+        "DGSP/042-26/FED": "permiso_federal.pdf",
+        "MX-9001-QMS": "certificado_iso9001.pdf",
+        "PRC-99402-26": "poliza_responsabilidad_civil.pdf",
+        "REPSE-STPS-2026": "registro_repse.pdf",
+        "CPS-ELEMSEG-V3": "contrato_machote.docx",
+        "AUD-ELEMSEG-2026": "elemsegpriv.pdf",
+      "RH-RECLUTA-2026": "recluta_rh.pdf",
+      "CONT-FACT-V2": "fact.pdf",
+      "CONT-VIAT-GTO": "viat.pdf",
+      "ADM-CONTRATO-BASE": "contrato.pdf",
+       "ADM-REPSE-VALIDO": "repse.pdf",
+       "SEG-MANUAL-TACT": "manual.pdf",
+       "SEG-BITACORA-RUTAS": "bitacora_rutas.pdf",
+       "SEG-BITACORA-VISITAS": "bitacora_visitas.pdf"
+
+    };
+
+    // 2. CONTRASEÑA EN TEXTO PLANO (Evita errores de entorno criptográfico)
+    const CONTRASEÑA_CORRECTA = "ELEMSEG2026";
+
+    // Filtrado de Categorías Tácticas
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            docRows.forEach(row => {
+                const category = row.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    row.style.display = 'grid';
+                    row.style.opacity = '1';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Descarga Directa con Validación de Contraseña Real
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const row = button.closest('.doc-row');
+            const metaTag = row.querySelector('.meta-tag').textContent.trim();
+            const archivoReal = enlacesDescarga[metaTag];
+
+            // Solicitar contraseña
+            const passwordIngresado = prompt("[CONTROL DE ACCESO ELEMSEGPRIV]\n\nIngrese la clave de autorización corporativa:");
+            
+            if (!passwordIngresado) return;
+
+            // Validación directa sin métodos asíncronos que fallen en local
+            if (passwordIngresado !== CONTRASEÑA_CORRECTA) {
+                alert("❌ ACCESO DENEGADO:\nContraseña incorrecta o credenciales inválidas.");
+                return;
+            }
+
+            // Descarga real e inmediata del archivo
+            const linkReal = document.createElement('a');
+            linkReal.href = archivoReal; 
+            linkReal.download = archivoReal; // Fuerza al navegador a descargar el archivo real
+            document.body.appendChild(linkReal);
+            linkReal.click();
+            document.body.removeChild(linkReal);
+
+            // Cambiar estado visual del botón
+            button.textContent = 'Descargado';
+            button.style.borderColor = 'var(--accent-green)';
+            button.style.color = 'var(--accent-green)';
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>
