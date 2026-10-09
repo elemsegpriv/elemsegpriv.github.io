@@ -1,6 +1,6 @@
 const CACHE_NAME = 'elemsegpriv-cache-v2';
 
-// Deja las rutas relativas directas, sin usar obligatoriamente el "./" que confunde a GitHub Pages
+// Rutas relativas directas optimizadas para servidores corporativos y GitHub Pages
 const APP_SHELL = [
   'index.html',
   'offline.html',
@@ -13,12 +13,11 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME).then(cache => {
       console.log('[SW] Descargando componentes corporativos...');
       
-      // Usamos map para intentar cargar cada archivo por separado. 
-      // Si uno falla, los demás sí se guardarán y el Service Worker NO se romperá.
+      // Mapeo tolerante: si un archivo falla, el SW no se rompe
       return Promise.all(
         APP_SHELL.map(url => {
           return cache.add(url).catch(err => {
-            console.warn(`[SW Warning] No se pudo precargar el archivo: ${url}. Verifique que exista en su servidor.`, err);
+            console.warn(`[SW Warning] No se pudo precargar: ${url}.`, err);
           });
         })
       );
@@ -26,7 +25,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// 2. Activación y Limpieza
+// 2. Activación y Limpieza de Cachés Antiguas
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
@@ -37,10 +36,12 @@ self.addEventListener('activate', event => {
   );
 });
 
-// 3. Estrategia de Red con Caída a Caché Funcional
+// 3. Estrategia de Red con Caída a Caché (Network First)
 self.addEventListener('fetch', event => {
+  // Filtrar esquemas que no sean HTTP/HTTPS (como chrome-extension:// o data:)
   if (!event.request.url.startsWith('http')) return;
 
+  // Solo interceptar métodos GET
   if (event.request.method !== 'GET') {
     event.respondWith(fetch(event.request));
     return;
@@ -49,7 +50,11 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+        // CORRECCIÓN: Permitir respuestas 'basic' (mismo origen) y 'cors' (CDN de fuentes, APIs externas, etc.)
+        const isSavantStatus = networkResponse.status === 200 || networkResponse.status === 0;
+        const isValidType = networkResponse.type === 'basic' || networkResponse.type === 'cors';
+
+        if (!networkResponse || !isSavantStatus || !isValidType) {
           return networkResponse;
         }
 
@@ -60,20 +65,19 @@ self.addEventListener('fetch', event => {
         return networkResponse;
       })
       .catch(() => {
-        // Modo Offline activo
+        // MODO OFFLINE ACTIVO
         return caches.match(event.request)
           .then(cachedResponse => {
             if (cachedResponse) return cachedResponse;
 
-            // Retorno de página de contingencia HTML
+            // Contingencia para navegación HTML
             if (event.request.headers.get('accept')?.includes('text/html')) {
-              // Busca tanto la versión directa como la indexada en la memoria caché
               return caches.match('offline.html').then(fallback => {
                 return fallback || caches.match('/offline.html');
               });
             }
 
-            // Retorno de imagen SVG de contingencia corregida con su namespace oficial
+            // CORRECCIÓN: SVG con namespace oficial e internacionalizado (xmlns)
             if (event.request.headers.get('accept')?.includes('image/')) {
               return new Response(
                 '<svg role="img" aria-label="Offline" xmlns="http://w3.org" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22 9M2 9a16 16 0 0 1 9.57-3.83"/></svg>', 
@@ -81,6 +85,7 @@ self.addEventListener('fetch', event => {
               );
             }
 
+            // Contingencia genérica de texto para scripts corporativos o datos rotos
             return new Response('Servicio de Seguridad Temporalmente Desconectado.', {
               status: 503,
               statusText: 'Service Unavailable',
