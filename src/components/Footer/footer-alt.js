@@ -41,6 +41,9 @@ const footerHTML = `
         <li><a href="/Linea_tiempo">Linea de tiempo</a></li>
         <li><a href="/Links">RS</a></li>
         <li><a href="/Directorio">Directorio</a></li>
+        <li><a href="/Uniforme">Uniforme</a></li>
+        <li><a href="/Cobertura">Cobertura</a></li>
+        <li><a href="/Videos">Videos</a></li>
       </ul>
     </div>
    <!-- Columna tercer centro -->
