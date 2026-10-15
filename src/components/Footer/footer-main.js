@@ -56,6 +56,9 @@ const footerHTML = `
         <li><a href="/Blog">Blog</a></li>
         <li><a href="/Noticias">Noticias</a></li>
         <li><a href="/Bolentin">Boletin</a></li>
+        <li><a href="/Capacitacion">Capacitación</a></li>
+        <li><a href="/Metodologia">Metodologia</a></li>
+
       </ul>
     </div>
     <!-- Columna derecha -->
