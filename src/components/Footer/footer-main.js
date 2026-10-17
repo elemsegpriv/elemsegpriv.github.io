@@ -29,6 +29,9 @@ const footerHTML = `
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#estadisticas">Estadisticas</a></li>
+        <li><a href="#blog">Noticias</a></li>
         <li><a href="#certificaciones">Certificaciones</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -44,7 +47,7 @@ const footerHTML = `
         <li><a href="/Uniforme">Uniforme</a></li>
         <li><a href="/Cobertura">Cobertura</a></li>
         <li><a href="/Videos">Videos</a></li>
-
+        <li><a href="/Estructura">Estructura</a></li>
       </ul>
     </div>
    <!-- Columna tercer centro -->
@@ -58,7 +61,7 @@ const footerHTML = `
         <li><a href="/Bolentin">Boletin</a></li>
         <li><a href="/Capacitacion">Capacitación</a></li>
         <li><a href="/Metodologia">Metodologia</a></li>
-
+        <li><a href="/Reservar">Reservar</a></li>
       </ul>
     </div>
     <!-- Columna derecha -->
